@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iris-model-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: iris-model-app
+  template:
+    metadata:
+      labels:
+        app: iris-model-app
+    spec:
+      containers:
+      - name: iris-model-app
+        image: artmakar/iris-model-app:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: ML_FLASK_ENV
+          value: 'http://localhost:5000'
