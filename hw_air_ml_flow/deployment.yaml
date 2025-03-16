@@ -14,9 +14,16 @@ spec:
     spec:
       containers:
       - name: iris-model-app
-        image: artmakar/iris-model-app:latest
+        image: alexeyk12/mlflow-airflow:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 5005
         env:
         - name: ML_FLASK_ENV
-          value: 'http://localhost:5000'
+          value: "http://localhost:5005"
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "250m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"

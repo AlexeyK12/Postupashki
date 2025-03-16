@@ -3,15 +3,16 @@ kind: Ingress
 metadata:
   name: iris-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite_target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - http:
+    - host: iris-model-app.local
+      http:
         paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: iris-model-app
-              port:
-                number: 80
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: iris-model-app
+                port:
+                  number: 80

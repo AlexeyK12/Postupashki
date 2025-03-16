@@ -1,7 +1,6 @@
-Flask
-joblib
-numpy
-scikit-learn
-uvicorn
-mlflow
 apache-airflow
+mlflow
+scikit-learn
+catboost<2.0
+numpy
+gunicorn
