@@ -1,1 +1,10 @@
+# ОТЧЁТ
 ![Image](задание.png)
+![Image](screen_docker.png)
+![Image](screen_mlflow.png)
+![Image](screen_mlflow_2.png)
+![Image](screen_airflow_1.png)
+![Image](screen_airflow_2.png)
+![Image](screen_airflow_3.png)
+![Image](screen_airflow_4.png)
+![Image](screen_airflow_5.png)
